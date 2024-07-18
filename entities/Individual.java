@@ -21,6 +21,14 @@ public class Individual extends TaxPayer {
 
     @Override
     public Double tax() {
-        return null;
+        if (anualIncome < 20000){
+            return (anualIncome * 0.15) - (healthExpenditures * 0.5);
+        }
+        else if (anualIncome >= 20000) {
+            return (anualIncome * 0.25) - (healthExpenditures * 0.5);
+        }
+        else {
+            return null;
+        }
     }
 }
